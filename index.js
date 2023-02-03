@@ -12,22 +12,22 @@ app.get("/oi", function (req, res) {
 });
 
 
-// CRUD -> Lista de Informações
+// CRUD -> Lista de Informações.
 const itens = ["Rick Sanchez", "Morty Smith", "Summer Smith"];
 
-// Endpoint Read All
+// Endpoint Read All.
 app.get("/item", function (req, res) {
   res.send(itens);
 });
   
-// Endpoint Read Single by ID
+// Endpoint Read Single by ID.
 app.get("/item/:id", function (req, res) {
   const id = req.params.id;
   const item = itens[id - 1]
   res.send(item);
 });
 
-// Endpoint Create
+// Endpoint Create.
 app.post("/item", function (req, res) {
   // console.log(req.body);
   const item = req.body;
