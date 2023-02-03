@@ -11,12 +11,11 @@ app.get("/oi", function (req, res) {
   res.send("Olá, Mundo!");
 });
 
-const itens = ["Rick Sanchez", "Morty Smith", "Summer Smith"];
 
 // CRUD -> Lista de Informações
+const itens = ["Rick Sanchez", "Morty Smith", "Summer Smith"];
 
 // Endpoint Read All
-
 app.get("/item", function (req, res) {
   res.send(itens);
 });
