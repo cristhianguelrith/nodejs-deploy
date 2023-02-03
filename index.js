@@ -30,8 +30,10 @@ app.get("/item/:id", function (req, res) {
 
 // Endpoint Create
 app.post("/item", function (req, res) {
-  console.log(req.body);
-  res.send("Create");
+  // console.log(req.body);
+  const item = req.body;
+  itens.push(item.nome)
+  res.send("Item criado com sucesso!");
 })
 
 app.listen(3000);
