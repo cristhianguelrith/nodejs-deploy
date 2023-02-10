@@ -1,8 +1,10 @@
 const express = require("express");
-const { MongoClient } = require("mongodb");
+const { MongoClient, ObjectId } = require("mongodb");
 
 // Localhost ou 127.0.0.1
-const DB_URL = "mongodb://127.0.0.1";
+// const DB_URL = "mongodb://127.0.0.1";
+// localhost:3000/item - Storm
+const DB_URL = "mongodb+srv://admin:2k9L9pcOOgW1SA6t@cluster0.dwijgfc.mongodb.net";
 const DB_NAME = "cristhian-database";
 
 async function main() {
@@ -39,19 +41,33 @@ app.get("/item", async function (req, res) {
 });
   
 // Endpoint Read Single by ID.
-app.get("/item/:id", function (req, res) {
+app.get("/item/:id", async function (req, res) {
   const id = req.params.id;
-  const item = itens[id - 1]
+  const item = await collection.findOne({ _id: new ObjectId(id) });
   res.send(item);
 });
 
 // Endpoint Create.
-app.post("/item", function (req, res) {
+app.post("/item", async function (req, res) {
   // console.log(req.body);
   const item = req.body;
-  itens.push(item.nome)
-  res.send("Item criado com sucesso!");
+  await collection.insertOne(item);
+  res.send(item);
 })
+
+// Endpoint Update.
+
+app.put("/item/:id", async function (req,res) {
+  const id = req.params.id;
+  const body = req.body;
+
+  await collection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: body }
+  );
+
+  res.send(body)
+});
 
 // Porta de saída
 app.listen(3000);
