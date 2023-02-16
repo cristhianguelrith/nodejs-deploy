@@ -69,8 +69,17 @@ app.put("/item/:id", async function (req,res) {
   res.send(body)
 });
 
+// Endpoint Delete.
+app.delete("/item/:id", async function (req,res) {
+  const id = req.params.id;
+
+  await collection.deleteOne({_id:new ObjectId(id) });
+  
+  res.send("Registro deletado com sucesso!");
+});
+
 // Porta de saída
 app.listen(3000);
-
 }
+
 main();
