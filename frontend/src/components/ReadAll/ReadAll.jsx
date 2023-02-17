@@ -7,14 +7,19 @@
  * OBS: caso vc tenha escolhido algo diferente no backend, pode manter o tema original
  * Não precisa ser integrado com o Back! Apenas a exibição dos dados no Front.
  * 
- * 
  * Exercício 2 (bônus!):
  * Pegue o div com a classe "Card" e extraia em um componente JSX, seguindo os mesmos
  * passos que fizemos para a criação do componente ReadAll
  */
 
+import Card from"../Card/Card";
+
 function ReadAll() {
-    return <div>Read All</div>
+    return (
+        <div className="Card">
+            <Card />
+        </div>
+    )
 }
 
 export default ReadAll;
