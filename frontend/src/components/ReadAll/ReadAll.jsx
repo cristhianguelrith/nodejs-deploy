@@ -14,6 +14,16 @@ const items = [
         nome: 'Finn e Jake',
         imageUrl: 'https://www.clipartmax.com/png/middle/40-407523_adventure-time-finn-and-jake-by-legaluslex-on-deviantart-adventure-time-finn.png'
     },
+    {
+        _id: '123456',
+        nome: 'Dipper e Mabel Pines',
+        imageUrl: 'https://super.abril.com.br/wp-content/uploads/2016/10/super_imggravity_falls_0_0.jpg?quality=90&strip=info&w=1024&resize=1200,800'
+    },
+    {
+        _id: '1234567',
+        nome: 'Goku e Vegeta',
+        imageUrl: 'https://kanto.legiaodosherois.com.br/w728-h381-gnw-cfill-gcc/wp-content/uploads/2022/05/legiao_eqoT4k3g8CUI.jpg.webp'
+    },
 ];
 
 
