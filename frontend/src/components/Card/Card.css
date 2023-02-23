@@ -4,15 +4,29 @@
     padding: 34px;
     box-shadow: 12px 12px white;
     margin: 20px;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .Card > h1 {
-    font-size: 28pt;
-    margin: 0;
+    font-size: 24pt;
+    margin: 0px;
+    margin-block: 0px;
+}
+
+.Card > h2 {
+    margin: 0px;
+    font-size: 10pt;
 }
 .imagephoto {
-    width: 250px;
-    border-radius: 2rem;
+    width: 170px;
+    border-radius: 1rem;
     box-shadow: 3px 3px 7px 2px rgba(0, 0, 0, 0.301);
-    margin-top: 34px;
+    margin: 10px 0px;
+
 }
